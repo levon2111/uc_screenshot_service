@@ -33,7 +33,8 @@ if (argv.full_page && argv.full_page != 'undefined') {
 
 async function run() {
     const browser = await puppeteer.launch({
-        headless: true
+        headless: true,
+        args: ['--no-sandbox'],
     });
     const page = await browser.newPage();
 
